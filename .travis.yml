@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : fuse
+# Source Repo         : https://github.com/jboss-fuse/fuse
+# Travis Job Link     : https://travis-ci.com/github/asellappen/fuse/
+# Created travis.yml  : Yes
+# Maintainer          : Arumugam N S <asellappen@yahoo.com> / Priya Seth<sethp@us.ibm.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
+language: java
+arch:
+    - amd64
+    - ppc64le
+
+dist: bionic
+
+script: 
+ # - mvn -Pall -Dts.all clean install
+   - mvn -Pamq clean install
+
+jdk:
+  - openjdk8
+  - openjdk11
+  - openjdk14
